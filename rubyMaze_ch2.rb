@@ -2,6 +2,9 @@ require './classes/grid'
 require './classes/binary_tree'
 require './classes/sidewinder'
 
-grid = Grid.new(10,10);
+
+grid = Grid.new(40,40);
 Sidewinder.on(grid);
-puts grid
+
+img = grid.to_png
+img.save "testMaze.png"
